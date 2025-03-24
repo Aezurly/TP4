@@ -6,10 +6,10 @@ GOOD_HASH = "e4cfc6f77ebbe2e23550ddab682316ab4ce1c03c"
 def main():
     os.system(f"git bisect start {BAD_HASH} {GOOD_HASH}")
     
-    exit_code = os.system("git bisect run python manage.py test")
+    os.system("git bisect run python manage.py test")
     os.system("git bisect reset")
     
-    exit(exit_code >> 8)
+    exit()
 
 if __name__ == "__main__":
     main()

@@ -16,4 +16,4 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: Run git bisect
-        run: python myscript.py # Remplace "Run tests"
+        run: python myscript.py
