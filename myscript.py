@@ -9,7 +9,7 @@ def main():
     exit_code = os.system("git bisect run python manage.py test")
     os.system("git bisect reset")
     
-    exit(exit_code)
+    exit(exit_code >> 8)
 
 if __name__ == "__main__":
     main()
